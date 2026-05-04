@@ -6,75 +6,88 @@
     <title>FoodLogistic S.A. | Frescura en Moviment</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-    <style>
-        /* Estils per als elements legals */
-        .form-legal { margin: 20px 0; text-align: left; font-size: 0.85rem; color: #444; font-family: 'Inter', sans-serif; }
-        .form-legal label { display: block; margin-bottom: 10px; cursor: pointer; }
-        .form-legal input { width: auto !important; display: inline-block !important; margin-right: 10px; }
-        
-        /* Banner de Cookies Estilitzat */
-        #cookie-popup {
-            position: fixed; bottom: 0; left: 0; width: 100%; background: #2c3e50; 
-            color: white; padding: 25px; z-index: 10000; box-shadow: 0 -2px 15px rgba(0,0,0,0.5); 
-            font-family: 'Inter', sans-serif; display: none;
-        }
-    </style>
 </head>
 <body>
 
     <header>
-        <nav>
-            <!-- MILLORA SOSTENIBILITAT: Imatge WebP i alt descriptiu -->
-            <div class="logo"><img src="img/FoodLogisticLogo.webp" alt="Logotip corporatiu de FoodLogistic S.A."></div>
-            <ul>
+        <nav class="nav-container">
+            <!-- SOSTENIBILITAT: Ús de format WebP per reduir pes i CO2 -->
+            <div class="logo">
+                <img src="img/FoodLogisticLogo.webp" alt="Logotip corporatiu de FoodLogistic S.A.">
+            </div>
+            <ul class="nav-links">
                 <li><a href="#inici">Inici</a></li>
                 <li><a href="#serveis">Serveis</a></li>
                 <li><a href="#sobre-nosaltres">Nosaltres</a></li>
-                <li><a href="#contacte">Contacte</a></li>
+                <li><a href="#contacte" class="btn-nav">Contacte</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="inici" class="hero">
-            <div class="hero-text">
-                <h1>Del camp a la seva taula amb la màxima cura.</h1>
-                <p>Logística especialitzada en productes frescos i alimentació.</p>
-                <a href="#contacte" class="btn-main">Sol·licita informació</a>
-            </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" alt="Logística eficient i cadena de fred al magatzem">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Del camp a la seva taula amb la màxima cura.</h1>
+                    <p>Logística especialitzada en productes frescos i alimentació.</p>
+                    <a href="#contacte" class="btn-main">Sol·licita informació</a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" alt="Magatzem logístic de FoodLogistic amb control de temperatura">
+                </div>
             </div>
         </section>
 
+        <!-- CORRECCIÓ VISUAL: Secció de serveis amb padding corregit -->
         <section id="serveis" class="services">
             <h2 class="section-title">Els nostres Serveis</h2>
             <div class="grid">
-                <div class="card"><div class="icon" aria-hidden="true">🚛</div><h3>Transport Refrigerat</h3><p>Cadena de fred garantida.</p></div>
-                <div class="card"><div class="icon" aria-hidden="true">📦</div><h3>Emmagatzematge</h3><p>Control de temperatura intel·ligent.</p></div>
-                <div class="card"><div class="icon" aria-hidden="true">🍎</div><h3>Distribució</h3><p>Puntualitat màxima en l'entrega.</p></div>
+                <div class="card">
+                    <div class="icon" aria-hidden="true">🚛</div>
+                    <h3>Transport Refrigerat</h3>
+                    <p>Cadena de fred garantida sota protocol de seguretat.</p>
+                </div>
+                <div class="card">
+                    <div class="icon" aria-hidden="true">📦</div>
+                    <h3>Emmagatzematge</h3>
+                    <p>Control de temperatura intel·ligent 24/7.</p>
+                </div>
+                <div class="card">
+                    <div class="icon" aria-hidden="true">🍎</div>
+                    <h3>Distribució</h3>
+                    <p>Puntualitat màxima en l'entrega a tot el Maresme.</p>
+                </div>
             </div>
         </section>
 
         <section id="contacte" class="contact">
             <div class="contact-card">
                 <h2>Contacta amb nosaltres</h2>
-                <form action="#">
-                    <div class="form-group"><label for="nom">Nom</label><input type="text" id="nom" placeholder="Nom complet" required></div>
-                    <div class="form-group"><label for="email">Email</label><input type="email" id="email" placeholder="correu@exemple.com" required></div>
-                    <div class="form-group"><label for="missatge">Missatge</label><textarea id="missatge" rows="4" placeholder="Com et podem ajudar?" required></textarea></div>
+                <form action="#" class="contact-form">
+                    <div class="form-group">
+                        <label for="nom">Nom Complet</label>
+                        <input type="text" id="nom" placeholder="Escriu el teu nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Corporatiu</label>
+                        <input type="email" id="email" placeholder="correu@empresa.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="missatge">Missatge</label>
+                        <textarea id="missatge" rows="4" placeholder="Com et podem ajudar?" required></textarea>
+                    </div>
 
                     <div class="form-legal">
-                        <label>
+                        <label class="check-item">
                             <input type="checkbox" name="privacitat" required>
-                            Accepto la <a href="privacitat.html">Política de Privacitat</a>.
+                            <span>Accepto la <a href="privacitat.html">Política de Privacitat</a>.</span>
                         </label>
-                        <label>
+                        <label class="check-item">
                             <input type="checkbox" name="comercial">
-                            Autoritzo comunicacions comercials segons l' <a href="avis-legal.html">Avís Legal</a>.
+                            <span>Autoritzo comunicacions segons l' <a href="avis-legal.html">Avís Legal</a>.</span>
                         </label>
                     </div>
-                    <button type="submit" class="btn-submit">Enviar petició</button>
+                    <button type="submit" class="btn-submit">Enviar Protocol</button>
                 </form>
             </div>
         </section>
@@ -82,44 +95,39 @@
 
     <footer>
         <div class="footer-links">
-            <a href="avis-legal.html">Avís Legal</a> | 
-            <a href="privacitat.html">Privacitat</a> | 
+            <a href="avis-legal.html">Avís Legal</a>
+            <a href="privacitat.html">Privacitat</a>
             <a href="cookies.html">Cookies</a>
         </div>
-        <p><strong>FoodLogistic S.A.</strong> | NIF: A08123456</p>
-        <p>Carrer de la Teixidora, núm. 13, 08302 Mataró (Barcelona)</p>
-        <p>&copy; 2026 FoodLogistic S.A. - Excel·lència en Logística Alimentària.</p>
+        <div class="footer-info">
+            <p><strong>FoodLogistic S.A.</strong> | NIF: A08123456</p>
+            <p>Carrer de la Teixidora, núm. 13, 08302 Mataró (Barcelona)</p>
+            <p>&copy; 2026 FoodLogistic S.A. - Excel·lència en Logística Alimentària.</p>
+        </div>
     </footer>
 
-    <div id="cookie-popup">
-        <div style="max-width: 1100px; margin: auto; display: flex; flex-direction: column; align-items: center; text-align: center;">
-            <p style="margin-bottom: 20px; font-size: 0.95rem; line-height: 1.5;">
-                Utilitzem cookies pròpies i de tercers per a fins analítics i per mostrar-li publicitat personalitzada. 
-                Pot acceptar totes les cookies polsant el botó "Acceptar" o configurar-les a la nostra 
-                <!-- MILLORA ACCESSIBILITAT: Color fosc #196f3d per contrast en text -->
-                <a href="cookies.html" style="color: #2ecc71; text-decoration: underline; font-weight: bold;">Política de Cookies</a>.
-            </p>
-            <div style="display: flex; gap: 15px;">
-                <button onclick="acceptCookies()" style="background: #196f3d; color: white; border: none; padding: 12px 30px; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 1rem;">Acceptar totes</button>
-                <button onclick="rejectCookies()" style="background: #7f8c8d; color: white; border: none; padding: 12px 30px; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 1rem;">Rebutjar</button>
+    <!-- BANNER DE COOKIES ACCESSIBLE -->
+    <div id="cookie-popup" class="cookie-banner">
+        <div class="cookie-content">
+            <p>Utilitzem galetes per millorar la teva experiència. <a href="cookies.html">Més info</a>.</p>
+            <div class="cookie-btns">
+                <button onclick="acceptCookies()" class="btn-cookie accept">Acceptar totes</button>
+                <button onclick="rejectCookies()" class="btn-cookie reject">Rebutjar</button>
             </div>
         </div>
     </div>
 
-    <script type="text/javascript">
+    <script>
         function acceptCookies() {
             document.getElementById('cookie-popup').style.display = 'none';
-            localStorage.setItem('foodlogistic_cookies_accepted', 'true');
+            localStorage.setItem('foodlogistic_cookies_ok', 'true');
         }
-
         function rejectCookies() {
             document.getElementById('cookie-popup').style.display = 'none';
-            localStorage.setItem('foodlogistic_cookies_accepted', 'false');
         }
-
         window.onload = function() {
-            if (!localStorage.getItem('foodlogistic_cookies_accepted')) {
-                document.getElementById('cookie-popup').style.display = 'block';
+            if (!localStorage.getItem('foodlogistic_cookies_ok')) {
+                document.getElementById('cookie-popup').style.display = 'flex';
             }
         };
     </script>
